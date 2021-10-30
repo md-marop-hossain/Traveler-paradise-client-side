@@ -15,6 +15,8 @@ import OrderPlace from './Pages/OrderPlace/OrderPlace';
 import MyOrders from './Pages/AllOrderComponent/MyOrders/MyOrders';
 import ManageAllOrders from './Pages/AllOrderComponent/ManageAllOrders/ManageAllOrders';
 import AddANewService from './Pages/AllOrderComponent/AddANewService/AddANewService';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -39,10 +41,10 @@ function App() {
             <Route exact path="/vehiclebooking">
               <VehicleBooking></VehicleBooking>
             </Route>
-            <Route exact path="/home/:OrderPlaceId">
+            <PrivateRoute exact path="/home/:OrderPlaceId">
               <OrderPlace></OrderPlace>
 
-            </Route>
+            </PrivateRoute>
             <Route exact path="/myorders">
               <MyOrders></MyOrders>
             </Route>
@@ -57,6 +59,9 @@ function App() {
             </Route>
             <Route exact path="/login">
               <LogIn></LogIn>
+            </Route>
+            <Route exact path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>

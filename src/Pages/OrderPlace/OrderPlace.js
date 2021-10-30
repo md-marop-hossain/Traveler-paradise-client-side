@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { useState, useEffect } from 'react';
+import { Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from '../hooks/useAuth';
@@ -21,6 +22,7 @@ const OrderPlace = () => {
 
         data.order = id;
         data.status = "pending";
+
         // data.OrderPlaceId = OrderPlaceId;
 
         console.log("Data: ", data);
@@ -43,27 +45,31 @@ const OrderPlace = () => {
 
 
     return (
-        <div>
-            {/* <h1>{OrderPlaceId}</h1>
+        <div className="mx-auto">
+            <Container>
+                <div>
+                    {/* <h1>{OrderPlaceId}</h1>
             <p>{specificTour?.country}</p> */}
 
-            <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
+                    <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
 
-                <input defaultValue={user.displayName} {...register("name")} />
+                        <input defaultValue={user.displayName} {...register("name")} />
 
-                <input defaultValue={user.email} {...register("email", { required: true })} />
-                {errors.email && <span className="error">This field is required</span>}
-
-
-                {/* <input defaultValue={specificTour?.country}  {...register("country")} /> */}
-                <input placeholder="Address" defaultValue="" {...register("address")} />
+                        <input defaultValue={user.email} {...register("email", { required: true })} />
+                        {errors.email && <span className="error">This field is required</span>}
 
 
-                <input placeholder="City" defaultValue="" {...register("city")} />
-                <input placeholder="phone number" defaultValue="" {...register("phone")} />
+                        {/* <input defaultValue={specificTour?.country}  {...register("country")} /> */}
+                        <input placeholder="Address" defaultValue="" {...register("address")} />
 
-                <input type="submit" />
-            </form>
+
+                        <input placeholder="City" defaultValue="" {...register("city")} />
+                        <input placeholder="phone number" defaultValue="" {...register("phone")} />
+
+                        <input type="submit" />
+                    </form>
+                </div>
+            </Container>
         </div>
     );
 };

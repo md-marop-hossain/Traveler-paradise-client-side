@@ -3,6 +3,7 @@ import './MyOrders.css';
 import { useState, useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
 import MySingleOrder from '../MySingleOrder/MySingleOrder';
+// import SweetAlert from 'react-bootstrap-sweetalert';
 
 const MyOrders = () => {
     const { user, email } = useAuth();
@@ -15,9 +16,10 @@ const MyOrders = () => {
             });
     }, []);
 
+
     //DELETE AN USER
     const handleDeleteUser = id => {
-        // console.log("idddd: ", id)
+        console.log("idddd: ", id)
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
             const url = `http://localhost:5000/orders/${id}`;

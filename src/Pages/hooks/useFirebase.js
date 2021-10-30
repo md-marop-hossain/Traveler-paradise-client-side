@@ -12,10 +12,17 @@ const useFirebase = () => {
     const [passUser, setPassUser] = useState({});
     const [createNewUser, setCreateNewUser] = useState({});
     const auth = getAuth();
+
+
+
+
     const signInUsingGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
         return signInWithPopup(auth, googleProvider)
     }
+
+
+
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, user => {
             if (user) {
@@ -27,6 +34,17 @@ const useFirebase = () => {
         });
         return () => unsubscribed;
     }, [])
+
+
+
+
+
+
+
+
+
+
+
     const logOut = () => {
         signOut(auth)
             .then(() => { })
@@ -39,6 +57,7 @@ const useFirebase = () => {
         }
         isLogIn ? processLogIn(email, password) : registerNewUser(email, password);
     }
+
     const processLogIn = (email, password) => {
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
@@ -51,19 +70,17 @@ const useFirebase = () => {
                 setError(error.message);
             })
     }
+
+
+
+
     const registerNewUser = (email, password) => {
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                const newUser = result.user;
-                setCreateNewUser(newUser);
-                setError('');
-                setUserName();
-            })
-            .catch(error => {
-                setError(error.message);
-            })
+
     }
+
+
     const setUserName = () => {
         const auth = getAuth();
         updateProfile(auth.currentUser, { displayName: name })
@@ -111,7 +128,11 @@ const useFirebase = () => {
         isLogIn,
         setIsLogIn,
         passUser,
-        createNewUser
+        createNewUser,
+        signInWithEmailAndPassword,
+        setCreateNewUser,
+        setUserName
+
     }
 };
 

@@ -23,7 +23,7 @@ const Header = () => {
                     <li class="nav-item ">
                         <NavLink className="nav-bar nav-link" activeStyle={{
                             fontWeight: "bold",
-                            color: "black"
+                            color: "red"
                         }} to="/home">Home</NavLink>
                     </li>
 
@@ -70,7 +70,7 @@ const Header = () => {
                     <li class="nav-item font-bold">
                         <NavLink className="nav-bar nav-link" activeStyle={{
                             fontWeight: "bold",
-                            color: "black"
+                            color: "orange"
                         }} to="/contact">Contact</NavLink>
                     </li>
                     {
@@ -130,13 +130,13 @@ const Header = () => {
                         user.email ? <li class="nav-item active mr-5">
 
                             <Button
-                                color="red"
-                                buttonType="outline"
-                                size="regular"
-                                rounded={true}
+                                color="teal"
+                                buttonType="filled"
+                                size="sm"
+                                rounded={false}
                                 block={false}
                                 iconOnly={false}
-                                ripple="dark"
+                                ripple="light"
                                 onClick={logOut}
                             >
                                 Log out
@@ -149,13 +149,13 @@ const Header = () => {
                                 fontWeight: "bold",
                                 color: "black"
                             }} to="/login"> <Button
-                                color="green"
-                                buttonType="outline"
-                                size="regular"
-                                rounded={true}
+                                color="blue"
+                                buttonType="filled"
+                                size="sm"
+                                rounded={false}
                                 block={false}
                                 iconOnly={false}
-                                ripple="dark"
+                                ripple="light"
                             >
                                     Sign In
                                 </Button></NavLink>
