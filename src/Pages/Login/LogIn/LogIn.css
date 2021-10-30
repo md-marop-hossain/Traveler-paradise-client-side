@@ -1,0 +1,15 @@
+.login-image{
+    background-image:url('https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80');
+    /* background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1035&q=80'); */
+    background-color: #f7f7f7d0;
+    /* height: 500px; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    opacity: 0.9;
+}
+.bg-log{
+    background-image: url('https://image.freepik.com/free-vector/abstract-background-with-squares_23-2148995948.jpg');
+    /* background-image: url('https://image.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg'); */
+}

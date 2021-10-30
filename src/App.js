@@ -1,23 +1,61 @@
-import logo from './logo.svg';
 import './App.css';
+import "@material-tailwind/react/tailwind.css";
+import Header from './Pages/Shared/Header/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Footer from './Pages/Shared/Footer/Footer';
+import Services from './Pages/Services/Services';
+import Home from './Pages/Home/Home';
+import HotelBooking from './Pages/Booking/HotelBooking/HotelBooking';
+import FlightBooking from './Pages/Booking/FlightBooking/FlightBooking';
+import VehicleBooking from './Pages/Booking/VehicleBooking/VehicleBooking';
+import Contact from './Pages/Contact/Contact';
+import AuthProvider from './Pages/contexts/AuthProvider';
+import LogIn from './Pages/Login/LogIn/LogIn';
+import OrderPlace from './Pages/OrderPlace/OrderPlace';
+import MyOrders from './Pages/MyOrders/MyOrders';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route exact path="/home">
+              <Home></Home>
+            </Route>
+            <Route exact path="/hotelbooking">
+              <HotelBooking></HotelBooking>
+            </Route>
+            <Route exact path="/flightbooking">
+              <FlightBooking></FlightBooking>
+            </Route>
+            <Route exact path="/vehiclebooking">
+              <VehicleBooking></VehicleBooking>
+            </Route>
+            <Route exact path="/home/:OrderPlaceId">
+              <OrderPlace></OrderPlace>
+
+            </Route>
+            <Route exact path="/myorders">
+              <MyOrders></MyOrders>
+            </Route>
+            <Route exact path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route exact path="/login">
+              <LogIn></LogIn>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+
+      </AuthProvider>
     </div>
   );
 }
