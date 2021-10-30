@@ -73,25 +73,31 @@ const Header = () => {
                             color: "black"
                         }} to="/contact">Contact</NavLink>
                     </li>
-                    <li class="nav-item font-bold">
-                        <NavLink className="nav-bar nav-link" activeStyle={{
-                            fontWeight: "bold",
-                            color: "black"
-                        }} to="/myorders">My Orders</NavLink>
-                    </li>
+                    {
+                        user.email && <li class="nav-item font-bold">
+                            <NavLink className="nav-bar nav-link" activeStyle={{
+                                fontWeight: "bold",
+                                color: "black"
+                            }} to="/myorders">My Orders</NavLink>
+                        </li>
+                    }
 
-                    <li class="nav-item font-bold">
-                        <NavLink className="nav-bar nav-link" activeStyle={{
-                            fontWeight: "bold",
-                            color: "black"
-                        }} to="/manageAllOrders">Manage All Order</NavLink>
-                    </li>
-                    <li class="nav-item font-bold">
-                        <NavLink className="nav-bar nav-link" activeStyle={{
-                            fontWeight: "bold",
-                            color: "black"
-                        }} to="/addANewServices">Add New Services</NavLink>
-                    </li>
+                    {
+                        user.email && <li class="nav-item font-bold">
+                            <NavLink className="nav-bar nav-link" activeStyle={{
+                                fontWeight: "bold",
+                                color: "black"
+                            }} to="/manageAllOrders">Manage All Order</NavLink>
+                        </li>
+                    }
+                    {
+                        user.email && <li class="nav-item font-bold">
+                            <NavLink className="nav-bar nav-link" activeStyle={{
+                                fontWeight: "bold",
+                                color: "black"
+                            }} to="/addANewServices">Add New Services</NavLink>
+                        </li>
+                    }
 
 
 
@@ -131,6 +137,7 @@ const Header = () => {
                                 block={false}
                                 iconOnly={false}
                                 ripple="dark"
+                                onClick={logOut}
                             >
                                 Log out
                             </Button>

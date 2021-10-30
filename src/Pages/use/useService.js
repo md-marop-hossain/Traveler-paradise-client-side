@@ -15,7 +15,7 @@ const useService = () => {
     }, [OrderPlaceId]);
 
     const specificTour = tour.find(t => t.id == OrderPlaceId);
-    return [specificTour]
+    return [specificTour, tour]
 };
 
 export default useService;

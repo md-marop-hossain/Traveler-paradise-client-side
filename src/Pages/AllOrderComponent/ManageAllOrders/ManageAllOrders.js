@@ -18,7 +18,7 @@ const ManageAllOrders = () => {
 
     // console.log("mu: "myOrders);
     return (
-        <div class="service-bg">
+        <div class="service-bg min-h-screen">
 
             <section class="container mx-auto p-6 font-mono">
                 <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">

@@ -14,6 +14,8 @@ const Services = () => {
             .then(data => setServices(data))
     }, [])
 
+    // console.log("service lent: ", services.length)
+
     return (
 
         <div class="service-bg">
