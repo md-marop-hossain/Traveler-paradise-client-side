@@ -1,10 +1,8 @@
 import React from 'react';
 import Button from "@material-tailwind/react/Button";
 const MySingleOrder = (props) => {
-    // console.log("pro: ", props.filteredOrder.order.country);
-
-
     const { address, city, email, name } = props.filteredOrder || {};
+
     return (
 
         <tr class="text-gray-700">
@@ -18,9 +16,7 @@ const MySingleOrder = (props) => {
             <td class="px-4 py-3 text-sm border">{address}</td>
             <td class="px-4 py-3 text-sm border">{city}</td>
             <td class="px-4 py-3 text-sm border">{props?.filteredOrder?.order?.country}</td>
-            {/* <td class="px-4 py-3 text-sm border">{city}</td> */}
             <td class="px-4 py-3 text-sm border">{props?.filteredOrder?.phone}</td>
-
             <td class="px-4 py-3 text-sm border"> <Button
                 color="blueGray"
                 buttonType="filled"

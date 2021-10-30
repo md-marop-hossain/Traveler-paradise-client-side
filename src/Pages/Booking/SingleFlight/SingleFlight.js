@@ -11,7 +11,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const SingleFlight = (props) => {
     const { plane, depart, destination, date, image, price, type } = props.flight || {};
-    // console.log(props.flight);
     const notify = () => toast.error('Sorry, work in progress...', {
         position: "top-center",
         autoClose: 2000,
@@ -23,16 +22,13 @@ const SingleFlight = (props) => {
         transition: Zoom,
     });
 
-
     return (
         <div>
-            {/* <h1>{plane}</h1> */}
             <Card>
                 <CardImage
                     src={image}
                     alt="Card Image"
                 />
-
                 <CardBody>
                     <H6 color="gray">{plane}</H6>
                     <Paragraph color="gray">
@@ -43,7 +39,6 @@ const SingleFlight = (props) => {
                         <h5 className="font-bold">Ticket price :  <span className="text-base ">${price}</span></h5>
                     </Paragraph>
                 </CardBody>
-
                 <CardFooter>
                     <Button onClick={notify} color="lightBlue" size="lg" ripple="light">
                         Book Now

@@ -1,11 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import ManageOrder from '../ManageOrder/ManageOrder'
-
-
-
 const ManageAllOrders = () => {
-
     const [myOrders, setMyOrders] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/orders')
@@ -15,11 +11,8 @@ const ManageAllOrders = () => {
                 setMyOrders(data)
             });
     }, []);
-
-    // console.log("mu: "myOrders);
     return (
         <div class="service-bg min-h-screen">
-
             <section class="container mx-auto p-6 font-mono">
                 <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
                     <div class="w-full overflow-x-auto">
@@ -33,11 +26,9 @@ const ManageAllOrders = () => {
                                     <th class="px-4 py-3">Address</th>
                                     <th class="px-4 py-3">City</th>
                                     <th class="px-4 py-3">Phone</th>
-                                    {/* <th class="px-4 py-3">delete</th> */}
                                 </tr>
                             </thead>
                             <tbody class="bg-white">
-
                                 {
                                     myOrders.map(myorder => <ManageOrder
                                         myOrder={myorder}
@@ -45,13 +36,11 @@ const ManageAllOrders = () => {
                                     )
 
                                 }
-
                             </tbody>
                         </table>
                     </div>
                 </div>
             </section>
-
         </div>
     );
 };

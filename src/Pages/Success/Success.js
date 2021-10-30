@@ -32,9 +32,6 @@ const Success = () => {
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     );
 };

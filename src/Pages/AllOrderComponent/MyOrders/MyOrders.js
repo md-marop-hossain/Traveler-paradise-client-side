@@ -3,10 +3,9 @@ import './MyOrders.css';
 import { useState, useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
 import MySingleOrder from '../MySingleOrder/MySingleOrder';
-// import SweetAlert from 'react-bootstrap-sweetalert';
 
 const MyOrders = () => {
-    const { user, email } = useAuth();
+    const { user } = useAuth();
     const [myOrders, setMyOrders] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/orders')
@@ -16,7 +15,6 @@ const MyOrders = () => {
             });
     }, []);
 
-
     //DELETE AN USER
     const handleDeleteUser = id => {
         console.log("idddd: ", id)
@@ -25,7 +23,6 @@ const MyOrders = () => {
             const url = `http://localhost:5000/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
-
             })
                 .then(res => res.json())
                 .then(data => {
@@ -36,9 +33,7 @@ const MyOrders = () => {
                     }
                 })
         }
-
     }
-
 
     return (
         <div class="service-bg min-h-screen">
@@ -56,27 +51,22 @@ const MyOrders = () => {
                                     <th class="px-4 py-3">City</th>
                                     <th class="px-4 py-3">Selected Country</th>
                                     <th class="px-4 py-3">Phone</th>
-                                    {/* <th class="px-4 py-3">delete</th> */}
                                 </tr>
                             </thead>
                             <tbody class="bg-white">
-
                                 {
                                     myOrders.filter(specife => specife.email == user.email).map(filteredOrder => <MySingleOrder
                                         filteredOrder={filteredOrder}
                                         handleDeleteUser={handleDeleteUser}
                                     >
-
                                     </MySingleOrder>
                                     )
                                 }
-
                             </tbody>
                         </table>
                     </div>
                 </div>
             </section>
-
         </div>
     );
 };

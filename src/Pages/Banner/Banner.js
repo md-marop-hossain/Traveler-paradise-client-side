@@ -4,8 +4,6 @@ import './Banner.css';
 const Banner = () => {
     return (
         <div>
-
-
             <section class="relative  bg-blueGray-50">
                 <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
                     <div class="absolute banner-div top-0 w-full h-full bg-center bg-cover" >
@@ -32,8 +30,6 @@ const Banner = () => {
                     </div>
                 </div>
                 <section class="pb-10 bg-blueGray-200 -mt-24">
-                    {/* <div class="container mx-auto px-4"> */}
-
                     <div class="flex flex-wrap">
                         <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
                             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
@@ -72,39 +68,13 @@ const Banner = () => {
                                     <h6 class="text-xl font-semibold">Verified Company</h6>
                                     <p class="mt-2 mb-4 text-blueGray-500">
                                         Every year ICTS Europe saves airlines millions of dollars in fines and flight expenses, through the Travel Document Verification scheme. With airlines having to bear the costs of repatriating passengers found to be travelling on fraudulent, expired, or erroneous documents as well as any related (and often hefty) fines, our Travel Document Verification scheme offers a viable solution to a growing concern.
-
-                                        {/* Designed to ensure that passengers possess the correct travel documentation and entry visas, the Document Verification Checks are carried out by our agents when interviewing passengers at check-in and gate. */}
-
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {/* <footer class="relative  pt-8 pb-6 mt-1">
-                        <div class="container mx-auto px-4">
-                            <div class="flex flex-wrap items-center md:justify-between justify-center">
-                                <div class="w-full md:w-6/12 px-4 mx-auto text-center">
-                                    <div class="text-sm text-blueGray-500 font-semibold py-1">
-                                        Made with <a href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800" target="_blank">Notus JS</a> by <a href="https://www.creative-tim.com" class="text-blueGray-500 hover:text-blueGray-800" target="_blank"> Creative Tim</a>.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer> */}
                 </section>
             </section>
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
     );
 };

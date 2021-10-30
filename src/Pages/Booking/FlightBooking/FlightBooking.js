@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
-// import SingleFlight from '../FlightBooking/FlightBooking';
 import SingleFlight from '../SingleFlight/SingleFlight';
 import './FlightBooking.css';
 
@@ -18,7 +17,6 @@ const FlightBooking = () => {
         <div className="flightbooking-container">
             <Container>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 mt-16 mb-16 ">
-
                     {
                         flights.map(flight => <SingleFlight
                             key={flight.id}
@@ -28,10 +26,8 @@ const FlightBooking = () => {
                         </SingleFlight>)
                     }
                 </div>
-
             </Container>
         </div>
-
     );
 };
 

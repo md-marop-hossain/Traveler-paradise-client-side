@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-// #e9e6e0
 const Footer = () => {
     return (
         <div>
@@ -11,25 +10,19 @@ const Footer = () => {
                             <h4 className="text-3xl fonat-semibold text-blueGray-700">Book Your Travel</h4>
                             <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
                                 1400 PennsylSUVia Ave. Washington, DC <br />
-
                                 P: 24/7 customer support: 1-555-555-5555 <br />
-
                                 E: booking@mail.com
                             </h5>
                             <div className="mt-6 lg:mb-0 mb-6">
-
                                 <button className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                                     <i className="fab fa-twitter"></i>
                                 </button>
-
                                 <button className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                                     <i className="fab fa-facebook-square"></i>
                                 </button>
-
                                 <button className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                                     <i className="fab fa-dribbble"></i>
                                 </button>
-
                                 <button className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                                     <i className="fab fa-linkedin"></i>
                                 </button>

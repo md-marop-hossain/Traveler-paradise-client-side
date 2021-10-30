@@ -13,15 +13,10 @@ const useFirebase = () => {
     const [createNewUser, setCreateNewUser] = useState({});
     const auth = getAuth();
 
-
-
-
     const signInUsingGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
         return signInWithPopup(auth, googleProvider)
     }
-
-
 
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, user => {
@@ -34,15 +29,6 @@ const useFirebase = () => {
         });
         return () => unsubscribed;
     }, [])
-
-
-
-
-
-
-
-
-
 
 
     const logOut = () => {
@@ -70,17 +56,11 @@ const useFirebase = () => {
                 setError(error.message);
             })
     }
-
-
-
-
     const registerNewUser = (email, password) => {
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, email, password)
 
     }
-
-
     const setUserName = () => {
         const auth = getAuth();
         updateProfile(auth.currentUser, { displayName: name })

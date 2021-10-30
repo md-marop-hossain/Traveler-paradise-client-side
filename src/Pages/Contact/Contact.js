@@ -42,7 +42,6 @@ const Contact = () => {
                             <label for="email" class="leading-7 text-sm text-gray-600 font-bold">Message</label>
                             <textarea id="message" name="message" rows="4" class="w-full bg-white rounded-md border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-150 ease-in-out"> </textarea>
                         </div>
-                        {/* <button class="text-white button-color rounded-md border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 text-lg">Submit</button> */}
                         <Button
                             color="blueGray"
                             buttonType="filled"

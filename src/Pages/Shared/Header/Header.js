@@ -9,37 +9,25 @@ const Header = () => {
     }
     // fixed-top
     return (
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
             <a class="navbar-brand font-black text-2xl " href="/home">Tarveler's Paradise</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-
-
                     <li class="nav-item ">
                         <NavLink className="nav-bar nav-link" activeStyle={{
                             fontWeight: "bold",
                             color: "red"
                         }} to="/home">Home</NavLink>
                     </li>
-
-
-
                     <li class="nav-item">
                         <NavLink className="nav-bar nav-link font-bold" activeStyle={{
                             fontWeight: "bold",
                             color: "black"
                         }} to="/tour">Tour</NavLink>
                     </li>
-
-
-
-
-
                     <li class="nav-item dropdown font-bold">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Booking
@@ -55,9 +43,6 @@ const Header = () => {
                                 fontWeight: "bold",
                                 color: "black"
                             }} to="/flightbooking">Flight Booking</NavLink>
-
-
-
                             <div class="dropdown-divider font-bold "></div>
 
                             <NavLink className="nav-bar dropdown-item font-bold" activeStyle={{
@@ -98,11 +83,6 @@ const Header = () => {
                             }} to="/addANewServices">Add New Services</NavLink>
                         </li>
                     }
-
-
-
-
-
                 </ul>
                 <form onSubmit={handleHeaderForm} class="form-inline my-2 my-lg-0 ">
 
@@ -120,12 +100,7 @@ const Header = () => {
                         Search
                     </Button>
                 </form>
-
-
                 <ul class="navbar-nav ml-5">
-
-
-
                     {
                         user.email ? <li class="nav-item active mr-5">
 
@@ -142,9 +117,6 @@ const Header = () => {
                                 Log out
                             </Button>
                         </li> : <li class="nav-item mr-5 font-bold active">
-
-
-
                             <NavLink className="nav-bar nav-link" activeStyle={{
                                 fontWeight: "bold",
                                 color: "black"
@@ -162,10 +134,7 @@ const Header = () => {
 
                         </li>
                     }
-
-
                 </ul>
-
             </div>
         </nav>
     );
