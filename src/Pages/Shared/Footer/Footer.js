@@ -30,10 +30,6 @@ const Footer = () => {
                                     <i className="fab fa-dribbble"></i>
                                 </button>
 
-                                {/* <button className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                                    <i className="fab fa-github"></i>
-                                </button> */}
-
                                 <button className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                                     <i className="fab fa-linkedin"></i>
                                 </button>

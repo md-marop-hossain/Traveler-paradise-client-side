@@ -13,16 +13,17 @@ const OrderPlace = () => {
     const { user } = useAuth();
 
     const [id] = useService();
-    console.log("id: ", id);
+    // console.log("id: ", id);
     // const { OrderPlaceId } = useParams();
 
     const onSubmit = data => {
         // specificTour.country = data;
 
         data.order = id;
+        data.status = "pending";
         // data.OrderPlaceId = OrderPlaceId;
 
-        // console.log("Data: ", data);
+        console.log("Data: ", data);
 
         fetch('http://localhost:5000/orders', {
             method: 'POST',

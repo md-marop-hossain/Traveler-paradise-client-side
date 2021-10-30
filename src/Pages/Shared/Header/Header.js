@@ -80,6 +80,23 @@ const Header = () => {
                         }} to="/myorders">My Orders</NavLink>
                     </li>
 
+                    <li class="nav-item font-bold">
+                        <NavLink className="nav-bar nav-link" activeStyle={{
+                            fontWeight: "bold",
+                            color: "black"
+                        }} to="/manageAllOrders">Manage All Order</NavLink>
+                    </li>
+                    <li class="nav-item font-bold">
+                        <NavLink className="nav-bar nav-link" activeStyle={{
+                            fontWeight: "bold",
+                            color: "black"
+                        }} to="/addANewServices">Add New Services</NavLink>
+                    </li>
+
+
+
+
+
                 </ul>
                 <form onSubmit={handleHeaderForm} class="form-inline my-2 my-lg-0 ">
 
