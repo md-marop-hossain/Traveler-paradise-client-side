@@ -17,7 +17,7 @@ const FlightBooking = () => {
     return (
         <div className="flightbooking-container">
             <Container>
-                <div className="grid grid-cols-3 gap-4 mt-16 mb-16 ">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 mt-16 mb-16 ">
 
                     {
                         flights.map(flight => <SingleFlight

@@ -54,6 +54,7 @@ const MyOrders = () => {
                                     <th class="px-4 py-3">Status</th>
                                     <th class="px-4 py-3">Address</th>
                                     <th class="px-4 py-3">City</th>
+                                    <th class="px-4 py-3">Selected Country</th>
                                     <th class="px-4 py-3">Phone</th>
                                     {/* <th class="px-4 py-3">delete</th> */}
                                 </tr>
