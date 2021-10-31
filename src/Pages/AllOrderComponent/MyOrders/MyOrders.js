@@ -8,7 +8,7 @@ const MyOrders = () => {
     const { user } = useAuth();
     const [myOrders, setMyOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://dark-goblin-31364.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
                 setMyOrders(data)
@@ -20,7 +20,7 @@ const MyOrders = () => {
         console.log("idddd: ", id)
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://dark-goblin-31364.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -8,7 +8,7 @@ const AddANewService = () => {
 
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://dark-goblin-31364.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -20,7 +20,7 @@ const AddANewService = () => {
         const details = shortDetailsRef.current.value;
         const newService = { id, country, image, details }
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://dark-goblin-31364.herokuapp.com/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

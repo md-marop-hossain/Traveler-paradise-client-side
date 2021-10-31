@@ -6,7 +6,7 @@ import './VehicleBooking.css';
 const VehicleBooking = () => {
     const [vehicles, setVehicles] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/cars')
+        fetch('https://dark-goblin-31364.herokuapp.com/cars')
             .then(res => res.json())
             .then(data => setVehicles(data))
     }, [])

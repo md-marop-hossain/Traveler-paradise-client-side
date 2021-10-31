@@ -7,7 +7,7 @@ const ManageOrder = (props) => {
 
     const { address, city, email, name } = props.myOrder || {};
     const handleApproved = (id) => {
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://dark-goblin-31364.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

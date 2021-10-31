@@ -17,7 +17,7 @@ const OrderPlace = () => {
         data.order = id;
         data.status = "pending";
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://dark-goblin-31364.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -33,7 +33,7 @@ const OrderPlace = () => {
     const { OrderPlaceId } = useParams();
     const [specificOrders, setSpecificOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://dark-goblin-31364.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
 
@@ -67,7 +67,7 @@ const OrderPlace = () => {
                                 </div>
                             </div>
                             <div className="bg-white shadow-md rounded-3xl max-w-3xl ">
-                                <h2>Fillup the form to ensure your order</h2>
+                                <p className="text-3xl text-center font-bold">Fillup the form to ensure your order</p>
                                 <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
                                     <input defaultValue={user.displayName} {...register("name")} />
                                     <input defaultValue={user.email} {...register("email", { required: true })} />

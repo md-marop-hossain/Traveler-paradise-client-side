@@ -6,7 +6,7 @@ import './FlightBooking.css';
 const FlightBooking = () => {
     const [flights, setFlights] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/flights')
+        fetch('https://dark-goblin-31364.herokuapp.com/flights')
             .then(res => res.json())
             .then(data => {
                 setFlights(data);

@@ -6,7 +6,7 @@ const useService = () => {
     const { OrderPlaceId } = useParams();
     const [tour, setTours] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://dark-goblin-31364.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
 
