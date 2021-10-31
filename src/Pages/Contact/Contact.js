@@ -17,7 +17,7 @@ const Contact = () => {
     });
     return (
         <div>
-            <section class="min-h-screen w-full text-gray-900 py-36 bg-center bg-cover bg-no-repeat section-bgg"
+            <section class=" min-h-screen w-full text-gray-900 py-36 bg-center bg-cover bg-no-repeat section-bgg"
             >
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 flex items-center justify-center">
                     <div class="lg:w-3/6 lg:pr-0 pr-0">
