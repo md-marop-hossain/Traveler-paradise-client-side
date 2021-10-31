@@ -12,6 +12,9 @@ const LogIn = () => {
         handleRegistration,
         isLogIn,
         error,
+        isLoading,
+        setIsLoading
+
     } = useAuth();
 
 
@@ -23,6 +26,11 @@ const LogIn = () => {
         signInUsingGoogle()
             .then(result => {
                 history.push(redirect_uri);
+                setIsLoading(true);
+            })
+            .catch((err) => console.log(err))
+            .finally(() => {
+                setIsLoading(false);
             })
     }
     return (
