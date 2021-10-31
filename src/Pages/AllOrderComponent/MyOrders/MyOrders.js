@@ -3,21 +3,23 @@ import './MyOrders.css';
 import { useState, useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
 import MySingleOrder from '../MySingleOrder/MySingleOrder';
+import Spinner from 'react-bootstrap/Spinner';
 
 const MyOrders = () => {
     const { user } = useAuth();
     const [myOrders, setMyOrders] = useState([]);
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
         fetch('https://dark-goblin-31364.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
                 setMyOrders(data)
             });
+        setLoading(true);
     }, []);
 
     //DELETE AN USER
     const handleDeleteUser = id => {
-        console.log("idddd: ", id)
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
             const url = `https://dark-goblin-31364.herokuapp.com/orders/${id}`;
@@ -26,6 +28,7 @@ const MyOrders = () => {
             })
                 .then(res => res.json())
                 .then(data => {
+                    console.log("myorder rec ", data)
                     if (data.deletedCount > 0) {
                         alert("Deleted successfully");
                         const remainingOrder = myOrders.filter(order => order._id !== id);
@@ -54,13 +57,12 @@ const MyOrders = () => {
                                 </tr>
                             </thead>
                             <tbody class="bg-white">
-                                {
-                                    myOrders.filter(specife => specife.email == user.email).map(filteredOrder => <MySingleOrder
-                                        filteredOrder={filteredOrder}
-                                        handleDeleteUser={handleDeleteUser}
-                                    >
-                                    </MySingleOrder>
-                                    )
+                                {loading ? myOrders.filter(specife => specife.email == user.email).map(filteredOrder => <MySingleOrder
+                                    filteredOrder={filteredOrder}
+                                    handleDeleteUser={handleDeleteUser}
+                                >
+                                </MySingleOrder>
+                                ) : < Spinner className="flex justify-content-center" animation="border" />
                                 }
                             </tbody>
                         </table>

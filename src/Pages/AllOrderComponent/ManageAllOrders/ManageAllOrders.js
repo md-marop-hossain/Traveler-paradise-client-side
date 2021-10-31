@@ -19,6 +19,29 @@ const ManageAllOrders = () => {
     //     setValue({});
     // }
 
+
+    //DELETE AN USER
+    // const handleMangeDelete = id => {
+    //     console.log("man id: ", id)
+    //     const proceed = window.confirm('Are you sure, you want to delete?');
+    //     if (proceed) {
+    //         const url = `https://dark-goblin-31364.herokuapp.com/orders/${id}`;
+    //         fetch(url, {
+    //             method: 'DELETE'
+    //         })
+    //             .then(res => res.json())
+    //             .then(data => {
+    //                 console.log("data : ", data)
+    //                 if (data.deletedCount > 0) {
+    //                     alert("Deleted successfully");
+    //                     const remainingOrder = myOrders.filter(order => order._id !== id);
+    //                     setMyOrders(remainingOrder);
+    //                 }
+    //             })
+    //     }
+    // }
+
+
     return (
         <div class="service-bg min-h-screen">
             <section class="container mx-auto p-6 font-mono">
@@ -52,6 +75,7 @@ const ManageAllOrders = () => {
                                 {
                                     myOrders.map(myorder => <ManageOrder
                                         myOrder={myorder}
+                                    // handleMangeDelete={handleMangeDelete}
                                     ></ManageOrder>
                                     )
 
