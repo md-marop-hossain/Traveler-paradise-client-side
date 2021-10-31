@@ -2,7 +2,6 @@ import React from 'react';
 import Button from "@material-tailwind/react/Button";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useState, useEffect } from 'react';
 
 const ManageOrder = (props) => {
 
@@ -26,23 +25,6 @@ const ManageOrder = (props) => {
         draggable: true,
         progress: undefined,
     });
-    // console.log("manage order id: ", props.myOrder.order._id)
-
-
-    // const [manageOrder, setManageOrder] = useState([]);
-    // useEffect(() => {
-    //     fetch('https://dark-goblin-31364.herokuapp.com/orders')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setManageOrder(data)
-    //         });
-    // }, []);
-
-
-
-
-
-
 
     return (
 

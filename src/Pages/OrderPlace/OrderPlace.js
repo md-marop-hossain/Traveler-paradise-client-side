@@ -9,10 +9,26 @@ import { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
+import Backdrop from '@material-ui/core/Backdrop';
+import { CircularProgress } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles((theme) => ({
+    backdrop: {
+        zIndex: theme.zIndex.drawer + 1,
+        color: '#fff',
+    },
+}));
+
+
 const OrderPlace = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { user } = useAuth();
     const [id] = useService();
+
+    const [spinner, setSpinner] = useState(true);
+    const classes = useStyles();
+
     const onSubmit = data => {
         data.order = id;
         data.status = "pending";
@@ -27,6 +43,7 @@ const OrderPlace = () => {
             .then(res => res.json())
             .then(data => {
                 reset();
+                setSpinner(false);
             }
             )
     }
@@ -38,8 +55,10 @@ const OrderPlace = () => {
             .then(data => {
 
                 setSpecificOrders(data)
+                setSpinner(false);
             });
     }, [OrderPlaceId]);
+
     const specificTour = specificOrders.find(t => t.id == OrderPlaceId);
     const notify = () => toast.success('Congratulations! Successfully ordered', {
         position: "top-center",
@@ -59,6 +78,11 @@ const OrderPlace = () => {
                         <div class="justify-self-auto relative  min-w-[500px] bg-white shadow-md rounded-3xl p-2 mx-1 my-3 cursor-pointer    max-w-3xl	">
                             <div class="overflow-x-hidden rounded-2xl relative">
                                 <img className="h-80 rounded-2xl w-full object-cover" src={specificTour?.image} alt="country" />
+                                {
+                                    spinner && <Backdrop className={classes.backdrop} open >
+                                        <CircularProgress color="inherit" />
+                                    </Backdrop>
+                                }
                             </div>
                             <div class="mt-4 pl-2 mb-2 flex justify-between ">
                                 <div>

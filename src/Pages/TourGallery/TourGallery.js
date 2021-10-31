@@ -4,8 +4,6 @@ const TourGallery = () => {
     return (
         <div>
             <section class="text-gray-600 body-font container px-5 py-24 mx-auto">
-                {/* <div class="container px-5 py-24 mx-auto"> */}
-
                 <div class="flex flex-col text-center w-full mb-20">
                     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Gallery Product</h1>
                 </div>
@@ -22,7 +20,6 @@ const TourGallery = () => {
                             </div>
                         </a>
                     </div>
-
                     <div class="lg:w-1/3 w-1/2 p-4">
                         <a href="#">
                             <div class="flex relative">
@@ -35,7 +32,6 @@ const TourGallery = () => {
                             </div>
                         </a>
                     </div>
-
                     <div class="lg:w-1/3 w-1/2 p-4">
                         <a href="#">
                             <div class="flex relative">
@@ -48,7 +44,6 @@ const TourGallery = () => {
                             </div>
                         </a>
                     </div>
-
                     <div class="lg:w-1/3 w-1/2 p-4">
                         <a href="#">
                             <div class="flex relative">
@@ -61,11 +56,8 @@ const TourGallery = () => {
                             </div>
                         </a>
                     </div>
-
-
                 </div>
             </section>
-
         </div>
     );
 };

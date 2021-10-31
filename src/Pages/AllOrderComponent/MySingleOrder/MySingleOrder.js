@@ -4,7 +4,6 @@ const MySingleOrder = (props) => {
     const { address, city, email, name } = props.filteredOrder || {};
 
     return (
-
         <tr class="text-gray-700">
             <td class="px-4 py-3 border">
                 {name}
