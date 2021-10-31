@@ -17,6 +17,7 @@ import ManageAllOrders from './Pages/AllOrderComponent/ManageAllOrders/ManageAll
 import AddANewService from './Pages/AllOrderComponent/AddANewService/AddANewService';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import NotFound from './Pages/NotFound/NotFound';
+import TourGallery from './Pages/TourGallery/TourGallery';
 
 function App() {
   return (
@@ -38,9 +39,9 @@ function App() {
             <Route exact path="/flightbooking">
               <FlightBooking></FlightBooking>
             </Route>
-            <Route exact path="/vehiclebooking">
+            {/* <Route exact path="/vehiclebooking">
               <VehicleBooking></VehicleBooking>
-            </Route>
+            </Route> */}
             <PrivateRoute exact path="/home/:OrderPlaceId">
               <OrderPlace></OrderPlace>
 
@@ -60,6 +61,9 @@ function App() {
             <Route exact path="/login">
               <LogIn></LogIn>
             </Route>
+            {/* <Route exact path="/tour">
+              <TourGallery></TourGallery>
+            </Route> */}
             <Route exact path="*">
               <NotFound></NotFound>
             </Route>

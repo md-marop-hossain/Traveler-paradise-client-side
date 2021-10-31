@@ -9,7 +9,7 @@ const Subscribe = () => {
                     <div class="md:flex items-center justify-center md:w-1/2 md:bg-gray-700">
                         <div class="py-6 px-8 md:py-0">
                             <h2 class="text-white-700 text-2xl font-bold md:text-gray-100">Subscribe Now to Join with us</h2>
-                            <p class="mt-2 text-white-600 md:text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur obcaecati odio</p>
+                            <p class="mt-2 text-white-600 md:text-gray-400">Travel is fatal to prejudice, bigotry, and narrow-mindedness, and many of our people need it sorely on these accounts. Broad, wholesome, charitable views of men and things cannot be acquired by vegetating in one little corner of the earth all one's lifetime</p>
                         </div>
                     </div>
                     <div class="flex items-center justify-center pb-6 md:py-0 md:w-1/2 md:border-b-8 border-gray-700">

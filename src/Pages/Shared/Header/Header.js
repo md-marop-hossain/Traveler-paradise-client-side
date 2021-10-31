@@ -22,12 +22,12 @@ const Header = () => {
                             color: "red"
                         }} to="/home">Home</NavLink>
                     </li>
-                    <li class="nav-item">
+                    {/* <li class="nav-item">
                         <NavLink className="nav-bar nav-link font-bold" activeStyle={{
                             fontWeight: "bold",
                             color: "red"
                         }} to="/tour">Tour</NavLink>
-                    </li>
+                    </li> */}
                     <li class="nav-item dropdown font-bold">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Booking
@@ -45,10 +45,10 @@ const Header = () => {
                             }} to="/flightbooking">Flight Booking</NavLink>
                             <div class="dropdown-divider font-bold "></div>
 
-                            <NavLink className="nav-bar dropdown-item font-bold" activeStyle={{
+                            {/* <NavLink className="nav-bar dropdown-item font-bold" activeStyle={{
                                 fontWeight: "bold",
                                 color: "black"
-                            }} to="/vehiclebooking">Car Booking</NavLink>
+                            }} to="/vehiclebooking">Car Booking</NavLink> */}
 
                         </div>
                     </li>
@@ -58,6 +58,25 @@ const Header = () => {
                             color: "red"
                         }} to="/contact">Contact</NavLink>
                     </li>
+
+                </ul>
+                {/* <form onSubmit={handleHeaderForm} class="form-inline my-2 my-lg-0 ">
+
+                    <input class="form-control mr-sm-2 header-input" type="search" placeholder="Search" aria-label="Search" />
+
+                    <Button
+                        color="blueGray"
+                        buttonType="filled"
+                        size="regular"
+                        rounded={false}
+                        block={false}
+                        iconOnly={false}
+                        ripple="light"
+                    >
+                        Search
+                    </Button>
+                </form> */}
+                <ul class="navbar-nav">
                     {
                         user.email && <li class="nav-item font-bold">
                             <NavLink className="nav-bar nav-link" activeStyle={{
@@ -84,22 +103,6 @@ const Header = () => {
                         </li>
                     }
                 </ul>
-                <form onSubmit={handleHeaderForm} class="form-inline my-2 my-lg-0 ">
-
-                    <input class="form-control mr-sm-2 header-input" type="search" placeholder="Search" aria-label="Search" />
-
-                    <Button
-                        color="blueGray"
-                        buttonType="filled"
-                        size="regular"
-                        rounded={false}
-                        block={false}
-                        iconOnly={false}
-                        ripple="light"
-                    >
-                        Search
-                    </Button>
-                </form>
                 <ul class="navbar-nav ml-5">
                     {
                         user.email ? <li class="nav-item active mr-5">
