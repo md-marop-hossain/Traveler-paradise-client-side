@@ -25,7 +25,7 @@ const Header = () => {
                     <li class="nav-item">
                         <NavLink className="nav-bar nav-link font-bold" activeStyle={{
                             fontWeight: "bold",
-                            color: "black"
+                            color: "red"
                         }} to="/tour">Tour</NavLink>
                     </li>
                     <li class="nav-item dropdown font-bold">
@@ -55,14 +55,14 @@ const Header = () => {
                     <li class="nav-item font-bold">
                         <NavLink className="nav-bar nav-link" activeStyle={{
                             fontWeight: "bold",
-                            color: "orange"
+                            color: "red"
                         }} to="/contact">Contact</NavLink>
                     </li>
                     {
                         user.email && <li class="nav-item font-bold">
                             <NavLink className="nav-bar nav-link" activeStyle={{
                                 fontWeight: "bold",
-                                color: "black"
+                                color: "red"
                             }} to="/myorders">My Orders</NavLink>
                         </li>
                     }
@@ -71,7 +71,7 @@ const Header = () => {
                         user.email && <li class="nav-item font-bold">
                             <NavLink className="nav-bar nav-link" activeStyle={{
                                 fontWeight: "bold",
-                                color: "black"
+                                color: "red"
                             }} to="/manageAllOrders">Manage All Order</NavLink>
                         </li>
                     }
@@ -79,7 +79,7 @@ const Header = () => {
                         user.email && <li class="nav-item font-bold">
                             <NavLink className="nav-bar nav-link" activeStyle={{
                                 fontWeight: "bold",
-                                color: "black"
+                                color: "red"
                             }} to="/addANewServices">Add New Services</NavLink>
                         </li>
                     }

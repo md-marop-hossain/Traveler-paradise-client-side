@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import ManageOrder from '../ManageOrder/ManageOrder'
+import ManageOrder from '../ManageOrder/ManageOrder';
+// import Button from "@material-tailwind/react/Button";
 const ManageAllOrders = () => {
     const [myOrders, setMyOrders] = useState([]);
     useEffect(() => {
@@ -11,6 +12,13 @@ const ManageAllOrders = () => {
                 setMyOrders(data)
             });
     }, []);
+
+    // const [value, setValue] = useState();
+
+    // const refresh = () => {
+    //     setValue({});
+    // }
+
     return (
         <div class="service-bg min-h-screen">
             <section class="container mx-auto p-6 font-mono">
@@ -29,6 +37,18 @@ const ManageAllOrders = () => {
                                 </tr>
                             </thead>
                             <tbody class="bg-white">
+                                {/* <Button
+                                    color="lightBlue"
+                                    buttonType="filled"
+                                    size="regular"
+                                    rounded={false}
+                                    block={false}
+                                    iconOnly={false}
+                                    ripple="light"
+                                    onClick={refresh}
+                                >
+                                    Refresh
+                                </Button> */}
                                 {
                                     myOrders.map(myorder => <ManageOrder
                                         myOrder={myorder}
@@ -36,11 +56,13 @@ const ManageAllOrders = () => {
                                     )
 
                                 }
+
                             </tbody>
                         </table>
                     </div>
                 </div>
             </section>
+
         </div>
     );
 };

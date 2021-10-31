@@ -4,7 +4,7 @@ import './Success.css';
 const Success = () => {
     return (
         <div>
-            <div class="bg-gray-900 p-28 div-bg-color">
+            <div class="bg-gray-900 p-28 div-bg-color break-all">
                 <div class='md:flex'>
                     <div class="md:w-6/12 text-black div-inside-color p-8 sm:rounded-tr-lg md:rounded-tr-none md:rounded-bl-lg rounded-tl-lg flex items-center">
                         <div>

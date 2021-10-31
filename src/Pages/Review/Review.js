@@ -11,7 +11,7 @@ const Review = () => {
             .then(data => setReviews(data))
     }, [])
     return (
-        <div class="review-bg">
+        <div style={{ backgroundColor: "hsl(0deg 0% 100%)" }}>
             <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
                 <div class="w-full text-center pb-8">
                     <svg class="mx-auto" width="48" height="42" viewBox="0 0 48 42" fill="none" xmlns="http://www.w3.org/2000/svg">

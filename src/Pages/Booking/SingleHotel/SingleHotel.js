@@ -12,19 +12,19 @@ const SingleHotel = (props) => {
             </div>
             <div id="body" class="flex flex-col  lg:col-span-3 sm:col-span-1 ml-5">
                 <h4 id="name" class="text-xl font-semibold mb-1">{hotelName}</h4>
-                <h5 id="job" class="text-gray-800 mt-1"><i class="fas fa-map-marker-alt"></i>{location}</h5>
+                <h5 id="job" class="text-gray-800 mt-1"><i class="fas fa-map-marker-alt"></i><span className="text-base font-semibold ml-2">{location}</span></h5>
                 <h5 id="job" class="text-gray-800 mt-1">{country}</h5>
                 <span> <Rating
                     initialRating={rating}
                     emptySymbol="far fa-star icon-color"
                     fullSymbol="fas fa-star icon-color"
                     readonly>
-                </Rating><span> ({rating})</span> </span>
-                <h5 id="job" class="text-gray-800 mt-1">{details}</h5>
+                </Rating><span className="font-bold"> ({rating})</span> </span>
+                <h5 id="job" class="text-gray-800 mt-1 text-base	font-semibold">{details}</h5>
                 <div class="grid grid-cols-2  md:grid-cols-2 break-all sm:grid-cols-1 gap-4">
-                    <div>  <h5 id="job" class="text-gray-800 mt-1"><i class="fas fa-phone"></i>{phoneNumber}</h5> </div>
-                    <div>   <h5 id="job" class="text-gray-800 mt-1 break-words"><i class="far fa-envelope"></i>{email}</h5></div>
-                    <div>    <h5 id="job" class="text-gray-800 mt-1"><i class="fas fa-bed"></i>{roomPerPerson}</h5></div>
+                    <div>  <h5 id="job" class="text-gray-800 mt-1"><i class="fas fa-phone"></i><span className="ml-1">{phoneNumber}</span></h5> </div>
+                    <div>   <h5 id="job" class="text-gray-800 mt-1 break-words"><i class="far fa-envelope"></i><span className="ml-1">{email}</span></h5></div>
+                    <div>    <h5 id="job" class="text-gray-800 mt-1"><i class="fas fa-bed"></i><span className="ml-2">{roomPerPerson}</span></h5></div>
                     <div>   <h5 id="job" class="text-gray-800 mt-1">${price}</h5></div>
 
                 </div>

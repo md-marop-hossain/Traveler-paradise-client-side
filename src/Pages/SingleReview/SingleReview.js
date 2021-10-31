@@ -3,7 +3,7 @@ import React from 'react';
 const SingleReview = (props) => {
     const { name, image, review } = props.r || {};
     return (
-        <div class="bg-white rounded-lg p-6">
+        <div class="rounded-lg p-6">
             <div class="flex items-center space-x-6 mb-4">
                 <img class="h-28 w-28 object-cover object-center rounded-full"
                     src={image} alt="photo" />

@@ -58,7 +58,7 @@ const OrderPlace = () => {
                     <div className=" grid grid-cols-1 justify-items-center items-center">
                         <div class="justify-self-auto relative  min-w-[500px] bg-white shadow-md rounded-3xl p-2 mx-1 my-3 cursor-pointer    max-w-3xl	">
                             <div class="overflow-x-hidden rounded-2xl relative">
-                                <img className="h-80 rounded-2xl w-full object-cover" src={specificTour?.image} />
+                                <img className="h-80 rounded-2xl w-full object-cover" src={specificTour?.image} alt="country" />
                             </div>
                             <div class="mt-4 pl-2 mb-2 flex justify-between ">
                                 <div>

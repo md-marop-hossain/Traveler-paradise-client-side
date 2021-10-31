@@ -21,8 +21,8 @@ const Contact = () => {
             >
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 flex items-center justify-center">
                     <div class="lg:w-3/6 lg:pr-0 pr-0">
-                        <h1 class="font-medium text-5xl text-white">Send us a message online</h1>
-                        <p class="leading-relaxed mt-4 text-white mr-3">
+                        <h1 class="font-medium text-5xl text-black">Send us a message online</h1>
+                        <p class="leading-relaxed mt-4 text-black font-bold	italic text-lg	 mr-3">
                             To request for special assistance, resolve baggage issues, or get your questions answered, the best way to reach us is to use the contact form.</p>
                     </div>
                     <div class="lg:w-3/6 xl:w-2/5 md:w-full bg-gray-50 p-8 flex flex-col lg:ml-auto w-full mt-10 lg:mt-0 rounded-md">
