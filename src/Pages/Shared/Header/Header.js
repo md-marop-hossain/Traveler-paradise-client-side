@@ -137,6 +137,9 @@ const Header = () => {
 
                         </li>
                     }
+                    {
+                        user.email && <h6 className="syl">Sign In : {user?.displayName}</h6>
+                    }
                 </ul>
             </div>
         </nav>
